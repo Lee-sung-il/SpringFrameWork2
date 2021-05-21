@@ -8,6 +8,7 @@
         </fileset>
         <fileset id="fileset2" name="ApplicationContext (2)" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/config/presentation-layer.xml</file>
         </fileset>
       </configuration>
     </facet>
