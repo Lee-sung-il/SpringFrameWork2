@@ -1,5 +1,8 @@
 package com.ync.biz.board;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.sql.Date;
 
 public class BoardVO {
@@ -12,7 +15,18 @@ public class BoardVO {
     private int cnt;
     private String searchCondition;
     private String searchKeyword;
+    private MultipartFile uploadFile;
 
+    @JsonIgnore
+    public MultipartFile getUploadFile() {
+        return uploadFile;
+    }
+
+    public void setUploadFile(MultipartFile uploadFile) {
+        this.uploadFile = uploadFile;
+    }
+
+    @JsonIgnore
     public String getSearchCondition() {
         return searchCondition;
     }
@@ -21,6 +35,7 @@ public class BoardVO {
         this.searchCondition = searchCondition;
     }
 
+    @JsonIgnore
     public String getSearchKeyword() {
         return searchKeyword;
     }
